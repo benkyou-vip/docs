@@ -1,0 +1,51 @@
+---
+title: 在电脑上高效学习第二语言
+description: 以 Refold 沉浸式方法为纲，用 Anki、Yomitan、mpv 与 mpvacious 搭建从输入到复习的完整学习工具链。
+template: splash
+hero:
+  tagline: 看、听、查、记——把真实的影视和文本变成你的语言课本，把每一句生词变成长期记忆。
+  actions:
+    - text: 从方法论开始
+      link: /guides/refold-roadmap/
+      icon: right-arrow
+    - text: Refold 官网
+      link: https://refold.la
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+这套指南记录了如何使用 Anki、Yomitan 和 mpv 搭建一套高效的语言学习环境。
+
+其核心思路是通过工具自动化，降低在阅读和观影时查词、制卡的摩擦力。
+
+## 工作流
+
+配置完成后，日常学习流程如下：
+
+1. 使用 **mpv** 播放带有目标语言字幕的视频；
+2. 遇到生词时，通过 **mpvacious** 快捷键截取当前字幕、音频和画面，直接发送至 Anki；
+3. 使用 **Yomitan** 快速查询词义，并补充到卡片中；
+4. 在 **Anki** 中根据间隔重复算法复习。
+
+:::note
+本文档以英语学习为例。但该工具链适用于大多数语言，切换语言时只需更换相应词典和素材即可，详见 Yomitan 配置章节。
+:::
+
+## 文档导航
+
+<CardGrid>
+	<Card title="Refold 路线图" icon="open-book" href="/guides/refold-roadmap/">
+		理解沉浸式学习的基本原理。
+	</Card>
+	<Card title="Anki 与 SRS" icon="clock" href="/guides/anki-srs/">
+		了解间隔重复系统，以及 AnkiConnect 的基础配置。
+	</Card>
+	<Card title="Yomitan 划词词典" icon="magnifier" href="/guides/yomitan/">
+		浏览器查词扩展，支持本地词典和快捷制卡。
+	</Card>
+	<Card title="mpv 播放器与 mpvacious 制卡" icon="desktop" href="/guides/mpv/">
+		支持精细键盘控制和外部脚本的开源播放器，配合 mpvacious 在播放中直接制卡。
+	</Card>
+</CardGrid>
