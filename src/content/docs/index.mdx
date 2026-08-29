@@ -1,40 +1,61 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: 在电脑上高效学习第二语言
+description: 以 Refold 沉浸式方法为纲，用 Anki、Yomitan、mpv 与 mpvacious 搭建从输入到复习的完整学习工具链。
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: 看、听、查、记——把真实的影视和文本变成你的语言课本，把每一句生词变成长期记忆。
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: 从方法论开始
+      link: /guides/refold-roadmap/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Refold 官网
+      link: https://refold.la
       icon: external
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+这套指南围绕一条完整的**沉浸式学习工作流**展开：方法上遵循 Refold 路线图，工具上以 Anki 为记忆中枢，Yomitan 负责秒查生词，mpv 负责精细的播放控制，mpvacious 则把「看视频」和「做卡片」缝合成一个动作。
+
+## 日常闭环
+
+熟练之后，你每天的沉浸学习长这样：
+
+1. 用 **mpv** 打开带目标语言字幕的剧集，正常沉浸观看；
+2. 遇到含生词的句子，**mpvacious** 一键把「句子 + 音频 + 截图」送进 Anki；
+3. 生词释义用 **Yomitan** 秒查，顺手补进卡片；
+4. 第二天在 **Anki** 里复习——间隔重复算法保证你在最该复习的时候复习。
+
+从看剧到复习，全程不过多按几个键，沉浸节奏几乎不被打断。
+
+> [!NOTE]
+> 本系列以**英语**为目标语言演示，但方法与整套工具链适用于任何语言——换语言时主要更换**词典**与**素材**，详见 Yomitan 篇的词典管理章节。
+
+## 工具链速览
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Refold 路线图" icon="open-book" href="/guides/refold-roadmap/">
+		方法论：沉浸式学习的原理与阶段划分，整套工具选择的总纲。
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Anki 与 SRS" icon="clock" href="/guides/anki-srs/">
+		记忆中枢：间隔重复原理、FSRS、推荐设置、卡片设计与 AnkiConnect。
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Yomitan 划词词典" icon="magnifier" href="/guides/yomitan/">
+		浏览器里按住一个键即出释义，支持多词典与一键制卡。
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="mpv 播放器" icon="desktop" href="/guides/mpv/">
+		全键盘操作、逐句跳转、变速、双语字幕——为「看懂每一句」设计。
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="mpvacious 视频制卡" icon="puzzle" href="/guides/mpvacious/">
+		mpv 插件：看剧时几秒完成「句子 + 音频 + 截图」进 Anki。
 	</Card>
 </CardGrid>
+
+## 适合谁
+
+- 有一点基础、想脱离教材、用真实内容学语言的人；
+- 愿意花一个下午配置工具，换取之后每天顺畅挖句的人；
+- 任何想把「看过的内容」变成「记住的内容」的学习者。
+
+所有工具免费且跨平台（Anki 桌面版免费开源）。一次配置，长期受益——从 [Refold 路线图](/guides/refold-roadmap/)开始吧。

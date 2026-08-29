@@ -6,19 +6,23 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: '沉浸式语言学习指南',
+			description:
+				'用 Refold、Anki、Yomitan、mpv 与 mpvacious 在电脑上高效学习第二语言',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: '方法论',
+					items: [{ label: 'Refold 沉浸式学习路线图', link: '/guides/refold-roadmap/' }],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: '工具链',
+					items: [
+						{ label: 'Anki 与 SRS', link: '/guides/anki-srs/' },
+						{ label: 'Yomitan 划词词典', link: '/guides/yomitan/' },
+						{ label: 'mpv 播放器与快捷键', link: '/guides/mpv/' },
+						{ label: 'mpvacious 视频制卡', link: '/guides/mpvacious/' },
+					],
 				},
 			],
 		}),
