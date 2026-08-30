@@ -10,18 +10,18 @@ Yomitan 把查词压缩成一步：按住快捷键，把鼠标移到生词上，
 
 ## Yomitan 是什么
 
-Yomitan 是一个开源的浏览器划词扩展，是 Yomichan 停止维护后由 TheMoeWay 社区接手的版本。主要特点：
+Yomitan 是一个开源的浏览器划词扩展，是 Yomichan 停止维护后由 Yomidevs 社区接手的版本。主要特点：
 
 - **秒级弹窗**：按住快捷键即可弹出词典。
 - **纯本地运行**：词典存在本地，查词不依赖网络。
 - **自动还原变形**：复数、过去式等变形会自动还原成原型再查。
 - **一键制卡**：配合 AnkiConnect，可直接把词条和例句加入 Anki。
 
-项目主页：[github.com/themoeway/yomitan](https://github.com/themoeway/yomitan)
+项目主页：[github.com/yomidevs/yomitan](https://github.com/yomidevs/yomitan)
 
 ## 安装
 
-在 Chrome / Edge / Firefox 的扩展商店搜索 "Yomitan"，或从[项目仓库](https://github.com/themoeway/yomitan)的安装链接进入商店页面安装。
+在 Chrome / Edge / Firefox 的扩展商店搜索 "Yomitan"，或从[项目仓库](https://github.com/yomidevs/yomitan)的安装链接进入商店页面安装。
 
 > [!TIP]
 > 建议把扩展固定（pin）到浏览器工具栏，方便查看开关状态和快速进入设置。

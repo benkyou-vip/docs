@@ -23,6 +23,10 @@ export default defineConfig({
 						{ label: 'mpv 播放器与 mpvacious 制卡', link: '/guides/mpv/' },
 					],
 				},
+				{
+					label: '关于',
+					items: [{ label: '鸣谢', link: '/acknowledgements/' }],
+				},
 			],
 		}),
 	],
