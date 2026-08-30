@@ -4,7 +4,7 @@
 #   1. 从 shinchiro/mpv-winbuild-cmake 的 latest release 下载每日构建
 #      (mpv.io 官方推荐的 Windows 构建,自带完整 ffmpeg 与编码支持)
 #   2. 按官方安装方式把 mpvacious (latest release) 装进 portable_config/scripts/
-#   3. 写入预置的 input.conf 与 script-opts/subs2srs.conf
+#   3. 写入预置的 mpv.conf、input.conf 与 script-opts/subs2srs.conf
 #   4. 打包为 zip 并创建 GitHub Release
 #
 # 触发:手动 (workflow_dispatch) 或每周一定时检查;版本组合未变化时自动跳过。
@@ -110,6 +110,21 @@ jobs:
           unzip -q mpvacious.zip -d package/portable_config/scripts
           test -f package/portable_config/scripts/mpvacious/main.lua
 
+          # 全局播放设置
+          cat > package/portable_config/mpv.conf <<'EOF'
+          sub-pos=100
+          secondary-sub-pos=90
+          hwdec=auto
+          force-window=yes
+          screenshot-format=webp
+          screenshot-webp-quality=92
+          screenshot-webp-compression=6
+          screenshot-template="%F/%p-%n"
+          screenshot-directory=~~desktop/mpv-screenshots
+          save-position-on-quit=yes
+          write-filename-in-watch-later-config=yes
+          EOF
+
           # 快捷键
           cat > package/portable_config/input.conf <<'EOF'
           s screenshot video
@@ -203,6 +218,9 @@ jobs:
              Ctrl+n   用当前字幕行一键制卡
              Ctrl+c   复制当前字幕文本
           4. 播放 YouTube 等网络视频需自行安装 yt-dlp 并加入 PATH。
+          5. 按 q 退出自动记住播放位置,下次打开同一文件继续;按 s/S 截图为 webp,
+             保存到桌面的 mpv-screenshots 文件夹下以视频文件名命名的子文件夹
+             (如需换位置可修改 mpv.conf 中的 screenshot-directory)。
 
           常见问题:
           - 本构建自带完整 ffmpeg 与编码支持,subs2srs.conf 中 use_ffmpeg=no 即可直接截取音频;
@@ -214,6 +232,7 @@ jobs:
           目录结构:
             mpv.exe               播放器主程序
             portable_config/
+              mpv.conf            全局播放设置(硬解、webp 截图、记住播放位置)
               input.conf          自定义快捷键
               script-opts/
                 subs2srs.conf     mpvacious 配置
@@ -260,6 +279,7 @@ jobs:
 
           ## 预置配置
 
+          - portable_config/mpv.conf:硬件解码、字幕位置、webp 截图(存至桌面 mpv-screenshots)、记住播放位置等全局设置
           - portable_config/input.conf:截图、次字幕切换、逐句跳转等快捷键
           - portable_config/script-opts/subs2srs.conf:mpvacious 配置(Lapis 笔记类型,菜单字体 Yu Gothic UI)
 
