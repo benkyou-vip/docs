@@ -16,46 +16,35 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-这套指南围绕一条完整的**沉浸式学习工作流**展开：方法上遵循 Refold 路线图，工具上以 Anki 为记忆中枢，Yomitan 负责秒查生词，mpv 负责精细的播放控制，mpvacious 则把「看视频」和「做卡片」缝合成一个动作。
+这套指南记录了如何使用 Anki、Yomitan 和 mpv 搭建一套高效的语言学习环境。
 
-## 日常闭环
+其核心思路是通过工具自动化，降低在阅读和观影时查词、制卡的摩擦力。
 
-熟练之后，你每天的沉浸学习长这样：
+## 学习流
 
-1. 用 **mpv** 打开带目标语言字幕的剧集，正常沉浸观看；
-2. 遇到含生词的句子，**mpvacious** 一键把「句子 + 音频 + 截图」送进 Anki；
-3. 生词释义用 **Yomitan** 秒查，顺手补进卡片；
-4. 第二天在 **Anki** 里复习——间隔重复算法保证你在最该复习的时候复习。
+配置完成后，日常学习流程如下：
 
-从看剧到复习，全程不过多按几个键，沉浸节奏几乎不被打断。
+1. 使用 **mpv** 播放带有目标语言字幕的视频；
+2. 遇到生词时，通过 **mpvacious** 快捷键截取当前字幕、音频和画面，直接发送至 Anki；
+3. 使用 **Yomitan** 快速查询词义，并补充到卡片中；
+4. 在 **Anki** 中根据间隔重复算法复习。
 
 > [!NOTE]
-> 本系列以**英语**为目标语言演示，但方法与整套工具链适用于任何语言——换语言时主要更换**词典**与**素材**，详见 Yomitan 篇的词典管理章节。
+> 本文档以英语学习为例。但该工具链适用于大多数语言，切换语言时只需更换相应词典和素材即可，详见 Yomitan 配置章节。
 
-## 工具链速览
+## 文档导航
 
 <CardGrid stagger>
 	<Card title="Refold 路线图" icon="open-book" href="/guides/refold-roadmap/">
-		方法论：沉浸式学习的原理与阶段划分，整套工具选择的总纲。
+		理解沉浸式学习的基本原理。
 	</Card>
 	<Card title="Anki 与 SRS" icon="clock" href="/guides/anki-srs/">
-		记忆中枢：间隔重复原理、FSRS、推荐设置、卡片设计与 AnkiConnect。
+		了解间隔重复系统，以及 AnkiConnect 的基础配置。
 	</Card>
 	<Card title="Yomitan 划词词典" icon="magnifier" href="/guides/yomitan/">
-		浏览器里按住一个键即出释义，支持多词典与一键制卡。
+		浏览器查词扩展，支持本地词典和快捷制卡。
 	</Card>
-	<Card title="mpv 播放器" icon="desktop" href="/guides/mpv/">
-		全键盘操作、逐句跳转、变速、双语字幕——为「看懂每一句」设计。
-	</Card>
-	<Card title="mpvacious 视频制卡" icon="puzzle" href="/guides/mpvacious/">
-		mpv 插件：看剧时几秒完成「句子 + 音频 + 截图」进 Anki。
+	<Card title="mpv 播放器与 mpvacious 制卡" icon="desktop" href="/guides/mpv/">
+		支持精细键盘控制和外部脚本的开源播放器，配合 mpvacious 在播放中直接制卡。
 	</Card>
 </CardGrid>
-
-## 适合谁
-
-- 有一点基础、想脱离教材、用真实内容学语言的人；
-- 愿意花一个下午配置工具，换取之后每天顺畅挖句的人；
-- 任何想把「看过的内容」变成「记住的内容」的学习者。
-
-所有工具免费且跨平台（Anki 桌面版免费开源）。一次配置，长期受益——从 [Refold 路线图](/guides/refold-roadmap/)开始吧。

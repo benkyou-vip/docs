@@ -20,8 +20,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Anki 与 SRS', link: '/guides/anki-srs/' },
 						{ label: 'Yomitan 划词词典', link: '/guides/yomitan/' },
-						{ label: 'mpv 播放器与快捷键', link: '/guides/mpv/' },
-						{ label: 'mpvacious 视频制卡', link: '/guides/mpvacious/' },
+						{ label: 'mpv 播放器与 mpvacious 制卡', link: '/guides/mpv/' },
 					],
 				},
 			],
